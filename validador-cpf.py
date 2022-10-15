@@ -17,6 +17,7 @@
 # Digito 1 = 0          #   Digito 2 = 9
 
 
+
 # Loop infinito
 while True:
     # cpf = '16899535009'
@@ -41,6 +42,8 @@ while True:
                 d = 0
             total = 0                   # Zera o total
             novo_cpf += str(d)          # Concatena o digito gerado no novo cpf
+
+
 
     # Evita sequencias de números iguais. Ex.: 11111111111, 00000000000...
     sequencia = novo_cpf == str(novo_cpf[0]) * len(cpf)
