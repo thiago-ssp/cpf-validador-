@@ -18,16 +18,24 @@
 
 
 
-# Loop infinito
-while True:
-    # cpf = '16899535009'
-    cpf = input('Digite um CPF: ')
+while True:                             # Loop infinito
+    print()
+    print(f'#### > Validador de {cpf}CPF < #####')
+    print()
+
+    cpf = int(input('Digite um CPF: '))
     novo_cpf = cpf[:-2]                 # Elimina os dois últimos digitos do CPF
     reverso = 10                        # Contador reverso
     total = 0
 
-    # Loop do CPF
-    for index in range(19):
+    while cpf:
+        if enumerate(cpf) < 10:
+            break
+        else:
+            continue
+
+    
+    for index in range(19):             # Loop do CPF
         if index > 8:                   # Primeiro índice vai de 0 a 9,
             index -= 9                  # São os 9 primeiros digitos do CPF
 
@@ -45,12 +53,14 @@ while True:
 
 
 
-    # Evita sequencias de números iguais. Ex.: 11111111111, 00000000000...
-    sequencia = novo_cpf == str(novo_cpf[0]) * len(cpf)
+    
+    sequencia = novo_cpf == str(novo_cpf[0]) * len(cpf)  # Evita sequencias de números iguais. Ex.: 11111111111, 00000000000...
 
     # Descobri que sequências avaliavam como verdadeiro, então também
     # adicionei essa checagem aqui
     if cpf == novo_cpf and not sequencia:
-        print('Válido')
+        print()
+        print(' > CPF Válido')
     else:
-        print('Inválido')
+        print()
+        print(' > CPF Inválido')

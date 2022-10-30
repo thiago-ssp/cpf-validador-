@@ -11,8 +11,8 @@ while True:
     reverso = 10                        # Contador reverso
     total = 0                           # O total das multiplicações
 
-    # Loop do CPF
-    for index in range(19):
+    
+    for index in range(19):             # Loop do CPF
         if index > 8:                   # Primeiro índice vai de 0 a 9,
             index -= 9                  # São os 9 primeiros digitos do CPF
 
